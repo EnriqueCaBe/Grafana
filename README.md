@@ -3,6 +3,7 @@ docker plugin install grafana/loki-docker-driver:latest --alias loki --grant-all
 
 sudo nano /etc/docker/daemon.json
 
+```json
 {
     "log-driver": "loki",
     "log-opts": {
@@ -10,5 +11,6 @@ sudo nano /etc/docker/daemon.json
         "loki-batch-size": "400"
     }
 }
+```
 
 sudo systemctl restart docker
